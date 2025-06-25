@@ -11,7 +11,7 @@ export type ProgressBarActions = {
 export type ProgressBarStore = ProgressBarState & ProgressBarActions;
 
 export const initProgressBarStore = (): ProgressBarState => {
-  return { step: 1 };
+  return { ...defaultInitState };
 };
 
 export const defaultInitState: ProgressBarState = {

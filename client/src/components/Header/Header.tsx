@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Logo from "./Logo";
 import NavLink from "./NavLink";
 import Location from "./Location";
@@ -9,7 +8,7 @@ interface NavLink {
   href: string;
 }
 
-let navLinks: NavLink[] = [
+const navLinks: NavLink[] = [
   {
     text: "О продукте",
     href: "/info",
