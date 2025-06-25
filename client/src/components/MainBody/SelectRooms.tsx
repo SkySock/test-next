@@ -1,6 +1,6 @@
 import { useConfigurationStore } from "@/providers/configurationStoreProvider";
 import clsx from "clsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 enum Room {
   None,
@@ -13,7 +13,29 @@ enum Room {
 
 export default function SelectRooms() {
   const [room, setRoom] = useState(Room.None);
-  const { setRoomsFilter } = useConfigurationStore((state) => state);
+  const { roomsFilter, setRoomsFilter } = useConfigurationStore(
+    (state) => state
+  );
+
+  useEffect(() => {
+    switch (roomsFilter) {
+      case Room.Studio.toString():
+        setRoom(Room.Studio);
+        break;
+      case Room.One:
+        setRoom(Room.One);
+        break;
+      case Room.Two:
+        setRoom(Room.Two);
+        break;
+      case Room.Three:
+        setRoom(Room.One);
+        break;
+      case Room.Four:
+        setRoom(Room.Four);
+        break;
+    }
+  }, [roomsFilter]);
 
   const handleRoom = (room: Room) => () => {
     setRoom(room);

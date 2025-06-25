@@ -1,7 +1,6 @@
 "use client";
 
 import MainBody from "@/components/MainBody/MainBody";
-import { ConfigurationStoreProvider } from "@/providers/configurationStoreProvider";
 import { ProgressBarStoreProvider } from "@/providers/progressBarStoreProvider";
 import { Jost } from "next/font/google";
 

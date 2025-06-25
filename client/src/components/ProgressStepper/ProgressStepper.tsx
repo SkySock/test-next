@@ -10,7 +10,7 @@ export type Step = {
 };
 
 export default function ProgressStepper({ steps = [] }: Props) {
-  const { step, setStep } = useProgressBarStore((state) => state);
+  const { step } = useProgressBarStore((state) => state);
 
   return (
     <div className="flex items-center justify-between w-full max-w-4xl mx-auto p-4">
@@ -42,7 +42,7 @@ export default function ProgressStepper({ steps = [] }: Props) {
                 />
               )}
               <div
-                onClick={() => setStep(index + 1)}
+                // onClick={() => setStep(index + 1)}
                 className={clsx(
                   "flex-row align-between space z-10 flex items-center justify-center border rounded-full transition-all duration-500 cursor-pointer origin-center",
                   isActive

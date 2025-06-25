@@ -16,6 +16,16 @@ export type City = {
   name: string;
 };
 
+export type PriceCategory = {
+  id: string;
+  name: string;
+};
+
+export type InteriorStyle = {
+  id: string;
+  name: string;
+};
+
 export type ConfigurationState = {
   cityFilter: City | null;
   complexFilter: string[];
@@ -23,6 +33,8 @@ export type ConfigurationState = {
   cities: City[];
   layouts: Layout[];
   selectedLayout: Layout | null;
+  selectedPriceCategory: PriceCategory | null;
+  selectedInteriorStyle: InteriorStyle | null;
 };
 
 export type ConfigurationActions = {
@@ -32,6 +44,8 @@ export type ConfigurationActions = {
   setCities: (cities: City[]) => void;
   setLayouts: (layouts: Layout[]) => void;
   setSelectedLayout: (selectedLayout: Layout | null) => void;
+  setSelectedPriceCategory: (category: PriceCategory | null) => void;
+  setSelectedInteriorStyle: (style: InteriorStyle | null) => void;
 };
 
 export type ConfigurationStore = ConfigurationState & ConfigurationActions;
@@ -43,6 +57,8 @@ export const defaultInitState: ConfigurationState = {
   cities: [],
   layouts: [],
   selectedLayout: null,
+  selectedPriceCategory: null,
+  selectedInteriorStyle: null,
 };
 
 export const initConfigurationStore = (): ConfigurationState => {
@@ -61,4 +77,8 @@ export const createConfigurationStore = (
     setLayouts: (layouts: Layout[]) => set({ layouts }),
     setSelectedLayout: (selectedLayout: Layout | null) =>
       set({ selectedLayout }),
+    setSelectedPriceCategory: (category: PriceCategory | null) =>
+      set({ selectedPriceCategory: category }),
+    setSelectedInteriorStyle: (style: InteriorStyle | null) =>
+      set({ selectedInteriorStyle: style }),
   }));
