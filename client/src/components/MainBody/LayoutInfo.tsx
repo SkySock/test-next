@@ -23,15 +23,16 @@ export default function LayoutInfo() {
   };
 
   return (
-    <div className="flex flex-col w-130 mr-[4vh] bg-white p-4 rounded-lg shadow-lg justify-between">
+    <div className="flex flex-col h-full w-130 mr-[4vh] bg-white p-3 rounded-lg shadow-lg justify-between">
       <h1 className="text-3xl font-bold mb-4 text-center">
         {selectedLayout?.title}
       </h1>
       <Image
+        className="mx-auto"
         src={selectedLayout?.image || ""}
         alt="Layout"
-        width={300}
-        height={300}
+        width={200}
+        height={200}
       />
       <div className="flex gap-4">
         <p className="">Описание:</p>
