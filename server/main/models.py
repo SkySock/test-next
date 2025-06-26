@@ -9,11 +9,11 @@ def get_path_upload_post_file(instance, file):
 # Create your models here.
 class Layout(models.Model):
     class Rooms(models.TextChoices):
-        Studio = 'draft'
+        Studio = 'Студия'
         One = '1'
         Two = '2'
         Three = '3'
-        Four = '4'
+        Four = '4+'
     title = models.CharField()
     price = models.IntegerField(default=0)
     image = models.FileField(

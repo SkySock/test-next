@@ -5,8 +5,9 @@ export type Layout = {
   id: string;
   title: string;
   price: number;
-  imgUrl: string | StaticImageData;
+  image: string | StaticImageData;
   street: string;
+  rooms: string;
   houseNumber: string;
   description: string;
 };

@@ -28,7 +28,7 @@ export default function LayoutInfo() {
         {selectedLayout?.title}
       </h1>
       <Image
-        src={selectedLayout?.imgUrl || ""}
+        src={selectedLayout?.image || ""}
         alt="Layout"
         width={300}
         height={300}

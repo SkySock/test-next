@@ -21,7 +21,13 @@ export default function Card({ cardInfo, selected, onSelect }: Props) {
       <p className="text-sm font-bold">{cardInfo.title}</p>
       <p className="text-xs">{cardInfo.price.toLocaleString("ru-RU")} руб.</p>
       <div className="h-35">
-        <Image className="max-h-35" alt="layout" src={cardInfo.imgUrl} />
+        <Image
+          className="max-h-35"
+          alt="layout"
+          src={cardInfo.image}
+          width={200}
+          height={200}
+        />
       </div>
       <div className="flex justify-between">
         <div className="flex flex-col">

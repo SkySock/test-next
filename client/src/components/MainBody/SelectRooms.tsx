@@ -29,7 +29,7 @@ export default function SelectRooms() {
         setRoom(Room.Two);
         break;
       case Room.Three:
-        setRoom(Room.One);
+        setRoom(Room.Three);
         break;
       case Room.Four:
         setRoom(Room.Four);
