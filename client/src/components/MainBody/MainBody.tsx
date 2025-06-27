@@ -38,11 +38,14 @@ export default function MainBody() {
   return (
     <>
       <ProgressStepper steps={firstProgressSteps} />
+      <h2 className="text-2xl font-bold text-center mb-4 mx-auto">
+        Создай дизайн своей будущей комнаты за 3 простых шага
+      </h2>
       <ContentWrapper>
         {choice === Choice.None && (
           <>
             <ChoiceBlock text="Выбери готовую" onClick={readySelection} />
-            <ChoiceBlock text="Нарисуй свою" onClick={selfUserSelection} />
+            <ChoiceBlock text="Нарисовать свою" onClick={selfUserSelection} />
           </>
         )}
         {choice === Choice.Ready && (

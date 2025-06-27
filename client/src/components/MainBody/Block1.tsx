@@ -8,14 +8,17 @@ import { useConfigurationStore } from "@/providers/configurationStoreProvider";
 import type {
   ConfigurationStore,
   InteriorStyle,
+  Layout,
   PriceCategory,
 } from "@/store/configurationStore";
 import LayoutInfo from "./LayoutInfo";
 import StepSlider from "./StepSlider";
+import Card from "./Card";
 
 interface Props {
   toBegin: () => void;
 }
+
 
 const interiorStyles: InteriorStyle[] = [
   { id: "1", name: "Лофт" },
@@ -104,6 +107,10 @@ export default function Block1({ toBegin }: Props) {
         )}
         {step >= 3 && <Button onClick={() => setStep(step - 1)}>Назад</Button>}
       </BlockContainer>
+      <div className="w-[20vw] py-4 px-8 flex flex-col gap-6 bg-primary-gray rounded-[8vh]">
+        <h1 className="text-center">Топ планировка</h1>
+        {!!selectedLayout && <Card cardInfo={selectedLayout }/>}
+      </div>
     </ContentWrapper>
   );
 }

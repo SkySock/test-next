@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Abhaya_Libre } from "next/font/google";
+import { Abhaya_Libre, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 
-const abhayaLibre = Abhaya_Libre({
+const abhayaLibre = Montserrat({
   variable: "--font-abhaya",
   weight: ["400", "500", "600", "700", "800"],
   display: "swap",

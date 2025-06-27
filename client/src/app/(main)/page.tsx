@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <main
-        className={`${jost.className} flex flex-col gap-[32px] row-start-2 items-center sm:items-start pt-6`}
+        className={` flex flex-col gap-[32px] row-start-2 items-center sm:items-start pt-6`}
       >
         <ProgressBarStoreProvider>
           <MainBody />
